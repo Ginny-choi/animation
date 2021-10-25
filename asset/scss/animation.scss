@@ -1,0 +1,114 @@
+#tailAnimation {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+  .circle {
+    position: absolute;
+    animation: movex 1s ease-in-out alternate infinite;
+    div {
+      background: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      animation: movey 1s linear infinite;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 0.1s;
+      div {
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+        animation-delay: 0.1s;
+      }
+    }
+    &:nth-of-type(3) {
+      animation-delay: 0.2s;
+      div {
+        width: 30px;
+        height: 30px;
+        opacity: 0.6;
+        animation-delay: 0.2s;
+      }
+    }
+    &:nth-of-type(4) {
+      animation-delay: 0.3s;
+      div {
+        width: 20px;
+        height: 20px;
+        opacity: 0.4;
+        animation-delay: 0.3s;
+      }
+    }
+    &:nth-of-type(5) {
+      animation-delay: 0.4s;
+      div {
+        width: 10px;
+        height: 10px;
+        opacity: 0.2;
+        animation-delay: 0.4s;
+      }
+    }
+  }
+}
+
+@keyframes movex {
+  0% {
+    transform: translate(-100px, 0);
+  }
+  100% {
+    transform: translate(100px, 0);
+  }
+}
+@keyframes movey {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, 100px) scale(1.3);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#dotAnimation {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+  .loading {
+    background: #fff;
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .circle1 {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+    }
+    .circle2 {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+    }
+  }
+}
