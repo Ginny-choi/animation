@@ -1,0 +1,237 @@
+body {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "Oswald", sans-serif;
+}
+
+.hover_wrap1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+@media (max-width: 800px) {
+  .hover_wrap1 {
+    flex-direction: column;
+  }
+}
+.hover_wrap1 figure {
+  width: 400px;
+  margin: 10px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.hover_wrap1 figure:hover img {
+  opacity: 0.1;
+}
+.hover_wrap1 figure img {
+  width: 100%;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: block;
+}
+.hover_wrap1 figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hover_wrap1 figure figcaption::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hover_wrap1 figure figcaption strong {
+  z-index: 2;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.hover_wrap1 .hover5 figcaption {
+  transform: translateX(80%) rotate(180deg);
+  transition: all 0.3s ease;
+}
+.hover_wrap1 .hover5:hover figcaption {
+  transform: translateX(0) rotate(0);
+}
+.hover_wrap1 .hover6 figcaption {
+  transform: translateX(-80%) rotate(-180deg);
+  transition: all 0.3s ease;
+}
+.hover_wrap1 .hover6:hover figcaption {
+  transform: translateX(0) rotate(0);
+}
+
+.hover_wrap2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  padding: 20px 0;
+}
+@media (max-width: 800px) {
+  .hover_wrap2 {
+    flex-direction: column;
+  }
+}
+.hover_wrap2 .effect {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+}
+.hover_wrap2 .effect .front {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.hover_wrap2 .effect .back {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hover_wrap2 .effect img {
+  width: 100%;
+  display: block;
+}
+.hover_wrap2 .effect figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 3% 4%;
+  box-sizing: border-box;
+  color: #fff;
+}
+.hover_wrap2 .effect figcaption h3 {
+  margin: 0;
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+.hover_wrap2 .effect figcaption p {
+  margin: 0;
+  font-size: 20px;
+}
+.hover_wrap2 .effect.hover7 .front {
+  transform: rotatey(0);
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.hover_wrap2 .effect.hover7 .back {
+  transform: rotatey(-180deg);
+  transition: transform 1s;
+}
+.hover_wrap2 .effect.hover7:hover .front {
+  transform: rotatey(180deg);
+}
+.hover_wrap2 .effect.hover7:hover .back {
+  transform: rotatey(0);
+}
+.hover_wrap2 .effect.hover8 .front {
+  transform: rotateX(0);
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.hover_wrap2 .effect.hover8 .back {
+  transform: rotateX(-180deg);
+  transition: transform 1s;
+}
+.hover_wrap2 .effect.hover8:hover .front {
+  transform: rotateX(180deg);
+}
+.hover_wrap2 .effect.hover8:hover .back {
+  transform: rotateX(0deg);
+}
+
+.hover_wrap3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+@media (max-width: 800px) {
+  .hover_wrap3 {
+    flex-direction: column;
+  }
+}
+.hover_wrap3 figure {
+  width: 400px;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(45deg, #874da2, #c43a30);
+  position: relative;
+}
+.hover_wrap3 figure img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+.hover_wrap3 figure.hover3:hover img {
+  opacity: 0.6;
+}
+.hover_wrap3 figure.hover3:hover::after {
+  top: 50%;
+  transition: top 0.5s;
+}
+.hover_wrap3 figure.hover3:hover::before {
+  left: 50%;
+  opacity: 1;
+  transition: left 0.6s;
+}
+.hover_wrap3 figure.hover4:hover img {
+  opacity: 0.6;
+}
+.hover_wrap3 figure.hover4:hover::after {
+  top: 50%;
+  transition: top 0.5s;
+}
+.hover_wrap3 figure.hover4:hover::before {
+  left: 50%;
+  opacity: 1;
+  transition: left 0.6s;
+}
+.hover_wrap3 figure::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 1px;
+  background: #fff;
+  z-index: 1;
+  opacity: 0;
+}
+.hover_wrap3 figure::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 1px;
+  background: #fff;
+}
+.hover_wrap3 figure.hover4::before {
+  left: -100%;
+}/*# sourceMappingURL=animation.min.css.map */
