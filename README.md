@@ -2,6 +2,7 @@
 
 - 참고 : 웹스토리보이즈
 - mouse hover 연습 : https://ginny-choi.github.io/animation/html/mouseHover.html
+- animation 연습 : https://ginny-choi.github.io/animation/html/animation.html
 
 ---
 
@@ -18,3 +19,6 @@
 - nth-of-type() : 유형이 똑같은 자식들 선택 // nth-of-child() : 유형 상관없이 자식들 선택
 - alternate : 방향을 앞으로 갔다가 뒤로 갔다가 순서대로 움직여줌 (normal & reverse 를 합친 상태) 계속 이어지는 효과.
 - animation 은 속성이나 ease in 값만 조금 변경줘도 크게 다른 효과가 나기에 조금씩 조정 해보는 것이 좋다!
+- animation: loading ease-in-out 1s 100; -> 1초동안 움직임. 100번만 실행
+  - 🎯 animation-iteration-count : number | infinite | inherit; 숫자 넣기도 가능하다 !
+    숫자, 소수점 | 무한 반복(infinite) | animation-iteration-count : 2, 0, infinite; 처럼 다중 속성 가능

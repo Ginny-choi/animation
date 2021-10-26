@@ -120,23 +120,86 @@
   background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
 #dotAnimation .loading {
-  background: #fff;
+  background: transparent;
   width: 20px;
   height: 100px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-animation: loading ease-in-out 1s 100;
+          animation: loading ease-in-out 1s 100;
 }
 #dotAnimation .loading .circle1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #000;
+  background: #fff;
 }
 #dotAnimation .loading .circle2 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #000;
+  background: #fff;
+  margin-top: 60px;
+}
+#dotAnimation .loading2 {
+  background: transparent;
+  width: 20px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: loading2 ease-in-out 1s 100;
+          animation: loading2 ease-in-out 1s 100;
+}
+#dotAnimation .loading2 .circle1 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+#dotAnimation .loading2 .circle2 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 60px;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes loading2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@keyframes loading2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
 }/*# sourceMappingURL=animation.min.css.map */

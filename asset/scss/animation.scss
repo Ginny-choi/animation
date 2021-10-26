@@ -90,25 +90,69 @@
     #e6dee9 100%
   );
   .loading {
-    background: #fff;
+    background: transparent;
     width: 20px;
     height: 100px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    animation: loading ease-in-out 1s 100;
 
     .circle1 {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #000;
+      background: #fff;
     }
     .circle2 {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #000;
+      background: #fff;
+      margin-top: 60px;
     }
+  }
+  .loading2 {
+    background: transparent;
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: loading2 ease-in-out 1s 100;
+
+    .circle1 {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .circle2 {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      margin-top: 60px;
+    }
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
   }
 }
