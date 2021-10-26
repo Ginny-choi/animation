@@ -306,3 +306,50 @@
     transform: rotateY(180deg) translateZ(100px) scaleY(1);
   }
 }
+
+#waveAnimation {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    .circle {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      margin: 5px 10px;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      transform-origin: top center;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    .row:nth-child(#{$i}) {
+      .circle {
+        animation-delay: #{$i}00ms;
+      }
+    }
+  }
+
+  // .row:nth-child(1){
+  //   .circle{
+  //     animation-delay: 100ms;
+  //   }
+  // }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}

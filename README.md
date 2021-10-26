@@ -25,4 +25,11 @@
 - 3d 효과를 내려면 원근점(perspective)을 표시하고 적용할 요소에 3d를 쓰겠다고 설정 해줘야한다.(transform-style: preserve-3d;)
 
 - 3d cube animation
+
   - translateZ 값이나 scaleY 값을 조정하여 늘어나는 늘어나는 효과를 줌
+  - 큐브 박스 top & bottom: X축 | left & right : Y축 | front & back : Z축
+  - 해당 축에 맞게 rotate 시켜서 3d cube를 만듬
+
+- wave animation
+  - 가운데 정렬을 할 때, position 으로도 가능하고 flex로도 가능한데, 차이점은 position은 영역이 안 잡혀서 백그라운드가 안들어간다.
+  - animation을 지정한 요소에 딜레이 값을 줘야하는데 다른곳에 지정해서 오류 생겼음!
