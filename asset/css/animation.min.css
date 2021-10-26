@@ -1,5 +1,5 @@
 #tailAnimation {
-  height: 100vh;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,12 +7,16 @@
 }
 #tailAnimation .circle {
   position: absolute;
+  -webkit-animation: movex 1s ease-in-out alternate infinite;
+          animation: movex 1s ease-in-out alternate infinite;
 }
 #tailAnimation .circle div {
   background: #fff;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  -webkit-animation: movey 1s linear infinite;
+          animation: movey 1s linear infinite;
 }
 #tailAnimation .circle:nth-of-type(2) {
   -webkit-animation-delay: 0.1s;
@@ -111,7 +115,7 @@
   }
 }
 #dotAnimation {
-  height: 100vh;
+  height: 600px;
   position: relative;
   background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
@@ -201,7 +205,7 @@
 }
 #cubeAnimation {
   background-color: #ffebee;
-  height: 100vh;
+  height: 600px;
   perspective: 1000px;
   display: flex;
   align-items: center;
@@ -420,7 +424,7 @@
   }
 }
 #waveAnimation {
-  height: 100vh;
+  height: 600px;
   background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
   display: flex;
   align-items: center;
@@ -501,5 +505,61 @@
   }
   100% {
     transform: rotate(360deg) scale(1.1);
+  }
+}
+#barAnimation {
+  height: 600px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  position: relative;
+}
+#barAnimation .bar {
+  width: 5px;
+  height: 400px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: bar 2s ease-in-out 100;
+          animation: bar 2s ease-in-out 100;
+}
+
+@-webkit-keyframes bar {
+  0% {
+    transform: rotate(0);
+    height: 0;
+  }
+  25% {
+    transform: rotate(0);
+    height: 400px;
+  }
+  50% {
+    transform: rotate(180deg);
+    height: 400px;
+  }
+  100% {
+    transform: rotate(180deg);
+    height: 0;
+  }
+}
+
+@keyframes bar {
+  0% {
+    transform: rotate(0);
+    height: 0;
+  }
+  25% {
+    transform: rotate(0);
+    height: 400px;
+  }
+  50% {
+    transform: rotate(180deg);
+    height: 400px;
+  }
+  100% {
+    transform: rotate(180deg);
+    height: 0;
   }
 }/*# sourceMappingURL=animation.min.css.map */
