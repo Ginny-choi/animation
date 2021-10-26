@@ -22,3 +22,7 @@
 - animation: loading ease-in-out 1s 100; -> 1초동안 움직임. 100번만 실행
   - 🎯 animation-iteration-count : number | infinite | inherit; 숫자 넣기도 가능하다 !
     숫자, 소수점 | 무한 반복(infinite) | animation-iteration-count : 2, 0, infinite; 처럼 다중 속성 가능
+- 3d 효과를 내려면 원근점(perspective)을 표시하고 적용할 요소에 3d를 쓰겠다고 설정 해줘야한다.(transform-style: preserve-3d;)
+
+- 3d cube animation
+  - translateZ 값이나 scaleY 값을 조정하여 늘어나는 늘어나는 효과를 줌
